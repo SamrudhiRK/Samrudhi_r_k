@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0d0d0d;
+    color: #ddd;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+
+/* Holographic Glass Slab */
+.holo-glass {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    padding: 40px;
+    border-radius: 15px;
+    width: 60%;
+    max-width: 600px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    animation: hologramEffect 3s infinite alternate;
+}
+
+/* Monospace Tagline */
+.tagline {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    color: rgba(173, 216, 230, 0.8);
+    margin-top: 15px;
+}
+
+/* Holographic Shimmer Animation */
+@keyframes hologramEffect {
+    0% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); }
+    100% { box-shadow: 0 0 30px rgba(0, 255, 255, 0.4); }
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ffff;
+}
+
+/* Sections */
+section {
+    padding: 100px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Timeline */
+.timeline {
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    padding-left: 20px;
+}
+
+.entry span {
+    font-weight: bold;
+    color: #ff007f;
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.project-link {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Uses the same text color as the surrounding content */
+    display: block; /* Makes the link fill the card area */
+    width: 100%; 
+    height: 100%;
+    padding: 10px;
+}
+.card {
+    cursor: pointer; /* Shows a pointer cursor to indicate it's clickable */
+}
